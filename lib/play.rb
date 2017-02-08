@@ -17,6 +17,7 @@ end
 
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
+  board[location] == "X" || board[location] == "O"
 end
 
 def valid_move?(board, index)
@@ -36,3 +37,8 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  until board == ["X", "X", "X", "X", "X", "X", "X", "X", "X"] 
+    turn(board)
+  end
+end
