@@ -7,3 +7,4 @@ describe './bin/play' do
     run_file("./bin/play")
   end
 end
+
