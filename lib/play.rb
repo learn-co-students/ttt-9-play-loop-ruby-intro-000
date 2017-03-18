@@ -35,4 +35,9 @@ def turn(board)
   end
 end
 
-# Define your play method below
+
+def play(board)
+  while board != ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+    turn(board)
+  end
+end
