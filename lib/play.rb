@@ -36,3 +36,9 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  until board == ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+    turn(board)
+  end
+end
