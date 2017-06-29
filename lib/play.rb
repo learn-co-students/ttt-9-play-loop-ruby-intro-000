@@ -24,15 +24,24 @@ def valid_move?(board, index)
 end
 
 def turn(board)
+  success_index = 0
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
     move(board, index)
+    success_index += 1
     display_board(board)
   else
     turn(board)
   end
+  success_index
 end
 
 # Define your play method below
+def play(board)
+  success_index = 0
+  while success_index < 9
+    success_index += turn(board)
+  end
+end
