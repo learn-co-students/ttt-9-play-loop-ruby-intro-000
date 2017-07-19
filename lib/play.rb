@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  puts "Now we start the game...."
+  while board != ["X","X","X","X","X","X","X","X","X"] do
+    turn(board)
+  end
+  puts "The game is over, the board is full...."
+end
