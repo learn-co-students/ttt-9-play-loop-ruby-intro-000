@@ -4,10 +4,8 @@ describe '#play' do
   it 'calls turn nine times' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-    allow(self).to receive(:gets).and_return('1','2','3','4','5','6','7','8','9')
-    
-    play(board)
+    expect(self).to receive(:turn).at_least(9).times
 
-    expect(board).to eq(["X","X","X","X","X","X","X","X","X",])
+    play(board)
   end
 end
