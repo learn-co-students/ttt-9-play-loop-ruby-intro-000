@@ -1,4 +1,13 @@
 # Helper Methods
+
+def play(board)
+  max_turns = 0
+  until max_turns == 9
+      turn(board)
+        max_turns += 1
+  end
+end
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
