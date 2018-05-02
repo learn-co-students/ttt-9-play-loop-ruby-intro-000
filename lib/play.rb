@@ -40,13 +40,24 @@ def checker(array)
   gate = false;
   counter = 0
   while counter <= 7
-    if (array[counter] != " ")  && ( array[counter] == array[counter + 1] && array[counter + 1] == array[counter + 2])
+    # horizontal 3 in a row
+    if ((array[counter] != " ")  && ( array[counter] == array[counter + 1]) && (array[counter + 1] == array[counter + 2]))
       gate = true
-      return gate
+    # vertical 3 in a row
+  elsif ( array[counter] != " " && (counter <= 2) && (array[counter] == array[counter + 3]) && (array[counter + 3] == array[counter + 6]) )
+      gate = true
+    # going diagonal right
+    elsif ( (array[counter] != " ") && (counter == 0 ) && (array[counter] == array[counter  + 4 ] )&& (array[counter + 4] == array[counter + 8])  )
+      gate = true
+    #going diagonal left
+    elsif ( (array[counter] != " ") && (counter == 2) && (array[counter] == array[counter  + 2 ]) && (array[counter + 2] == array[counter + 4])  )
+      gate = true
+    else
+      counter += 0
     end
     counter += 1
   end
-  return false
+  return gate
 end
 
 # Define your play method below
