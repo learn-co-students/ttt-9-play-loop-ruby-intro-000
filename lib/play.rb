@@ -35,4 +35,26 @@ def turn(board)
   end
 end
 
+#checks array for three-in-a-row
+def checker(array)
+  gate = false;
+  counter = 0
+  while counter <= 7
+    if (array[counter] != " ")  && ( array[counter] == array[counter + 1] && array[counter + 1] == array[counter + 2])
+      gate = true
+      return gate
+    end
+    counter += 1
+  end
+  return false
+end
+
 # Define your play method below
+def play(board)
+  winGate = checker(board)
+  moveCount = 0
+  while( moveCount <= 8 && !(winGate) )
+    turn(board)
+    moveCount += 1
+  end
+end
