@@ -23,7 +23,7 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-=begin
+=begin this is Flatiron's turn method using recursion
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -38,6 +38,7 @@ end
 =end
 
 def turn(board)
+  #This is my method NOT using recursion
   puts "Please enter 1-9:"
   input = input_to_index(gets.chomp)
   if valid_move?(board, input) == false
