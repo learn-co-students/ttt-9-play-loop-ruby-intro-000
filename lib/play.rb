@@ -36,3 +36,15 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+
+  player = "X"
+  for i in (1..9) do
+    turn(board)
+    if player == "X"
+      player = "O"
+    else
+      player = "X"
+    end # of if
+  end   # of do
+end     # of def play
