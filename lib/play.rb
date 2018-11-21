@@ -36,3 +36,18 @@ def turn(board)
 end
 
 # Define your play method below
+#accept an argument of a board.
+#start a loop and call turn
+#max of 9 turns to be played
+#use a while/until loop and make sure to exit loop
+
+def play(board)
+  display_board(board)
+
+  turns = 0
+  until turns == 9
+    turn(board)
+    turns += 1
+  end
+  
+end
