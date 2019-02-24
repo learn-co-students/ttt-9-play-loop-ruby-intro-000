@@ -31,8 +31,16 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
+    puts "Invalid Move Biaatch"
     turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  turn_count = 1
+  while turn_count <= 9
+    turn(board)
+    turn_count += 1
+  end
+
+  end
