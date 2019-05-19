@@ -36,3 +36,14 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+game_end = false
+counter = 1
+  until game_end == true || game_end == 10
+counter += 1
+turn(board)
+    if counter == 10
+      game_end = 10
+    end
+  end
+end
