@@ -36,3 +36,8 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  while board.include?("")|| board.include?(" ")|| board.include?(nil) == true
+    turn(board)
+  end
+end
