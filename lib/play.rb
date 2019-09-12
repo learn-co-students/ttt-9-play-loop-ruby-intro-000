@@ -36,4 +36,14 @@ def turn(board)
 end
 
 # Define your play method below
-# random comment You are awesome!
+
+
+def play (board)
+  play_index = 0
+  while play_index < 9
+    turn(board)
+    play_index += 1
+  end
+end
+
+
