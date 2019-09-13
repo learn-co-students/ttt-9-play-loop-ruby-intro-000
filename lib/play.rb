@@ -32,7 +32,15 @@ def turn(board)
     display_board(board)
   else
     turn(board)
+    1
   end
 end
 
-# Define your play method below
+def play(board)
+  currentTurn = 1
+
+  while currentTurn <= 9
+      currentTurn += 1
+      turn(board)
+    end
+  end
