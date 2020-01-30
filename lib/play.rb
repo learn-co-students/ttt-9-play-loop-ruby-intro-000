@@ -36,3 +36,17 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  move = 0
+<<<<<<< HEAD
+  until move == 9
+    turn(board)
+    move += 1
+=======
+  until move == 8
+    turn(board)
+    if move > 8
+      break
+>>>>>>> dd3185ba638c826cb865673f54c9ec63a8d42d75
+  end
+end
