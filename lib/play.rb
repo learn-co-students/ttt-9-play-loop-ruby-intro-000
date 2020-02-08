@@ -35,4 +35,19 @@ def turn(board)
   end
 end
 
+def full_board?(board)
+  index = 0
+  full = true
+  while index < 9
+    full = full && board[index] != " "
+    index += 1
+  end
+  return full
+end
+
 # Define your play method below
+def play(board)
+  while !(full_board?(board))
+    turn(board)
+  end
+end
