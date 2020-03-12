@@ -36,3 +36,16 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  turn_count = 0
+    while turn_count < 9
+    puts "X"
+      turn(board)
+    turn_count += 1
+  end
+end
+
+# while levitation_force < 10
+#   puts "Wingardium Leviosa"
+#   levitation_force += 1
+# end
