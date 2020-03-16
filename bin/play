@@ -6,5 +6,11 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
-
-# Make sure to execute #play below
+play(board)
+def play(board)
+   counter = 0
+   until counter == 9
+     turn(board)
+     counter += 1
+   end
+end
