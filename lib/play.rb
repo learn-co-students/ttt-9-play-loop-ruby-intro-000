@@ -37,16 +37,10 @@ end
 
 # Define your play method below
 def play(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
   counter = 0
-  while counter <= 9
+  while counter < 9
     counter += 1
-    if valid_move?(board, index)
-      move(board, index)
-      display_board(board)
-    else
-      turn(board)
-    end
+    turn(board)
+  end
 end
+  
