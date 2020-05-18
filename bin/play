@@ -8,3 +8,11 @@ puts "Welcome to Tic Tac Toe!"
 display_board(board)
 
 # Make sure to execute #play below
+
+play(board)
+
+
+
+
+
+## Run this file with:      ruby bin/play      or      ./bin/play
