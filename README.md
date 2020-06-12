@@ -16,7 +16,7 @@ In this lab you're going to build a `#play` method for Tic Tac Toe that initiate
 
 You'll notice that we've added some helper methods for you in here that you already created in previous labs. Take a look at our code and notice how it's probably different than how you wrote those methods. Isn't it cool that there are so many ways to write the same method? Now try to understand how these methods work together in the `#turn` method to represent a turn of Tic Tac Toe with move validation.
 
-There are no tests for these methods, and if they stop working as they do currently your lab will break because your `#play` method will depend upon a functioning `#turn` method. Edit these methods at your own risk.
+  There are no tests for these methods, and if they stop working as they do currently your lab will break because your `#play` method will depend upon a functioning `#turn` method. Edit these methods at your own risk.
 
 ### Part II: The CLI
 
