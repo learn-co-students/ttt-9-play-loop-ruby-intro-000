@@ -36,3 +36,17 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  counter = 0
+loop do 
+  turn(board)
+  counter = counter + 1
+  if counter == 9
+  puts "you have finished filling your board"
+  break
+  end
+end
+
+  
+end
