@@ -35,4 +35,15 @@ def turn(board)
   end
 end
 
+def play(board)
+  turn(board)
+  turn(board)
+  turn(board)
+  turn(board)
+  turn(board)
+  turn(board)
+  turn(board)
+  turn(board)
+  turn(board)
+end
 # Define your play method below
