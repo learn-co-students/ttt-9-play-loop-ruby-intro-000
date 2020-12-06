@@ -36,3 +36,13 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play (board)
+
+counter = 0
+loop while counter < 9
+
+  turn
+  counter += 1
+
+end
