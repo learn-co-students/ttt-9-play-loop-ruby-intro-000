@@ -1,3 +1,15 @@
+
+
+ def play(board)
+   counter = 0
+   while counter >= 9
+     counter +=1
+     turn(board)
+     puts "counter is " + counter
+   end
+ end
+
+
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -35,4 +47,30 @@ def turn(board)
   end
 end
 
+def win_state?(board)
+  hwin = horizontal_win(board, 0) || horizontal_win(board, 3) || horizontal_win(board, 6)
+  vwin = verticle_win(board, 0) || verticle_win(board, 1) ||  verticle_win(board, 2)
+<<<<<<< HEAD
+  dwin = diagonal_winA(board, 0) || diagonal_winB(board, 2)
+=======
+  dwin = diagonal_win(board, 0) || diagonal_win(board, 2)
+>>>>>>> 6651525177663ab4a1941920d808ac846cb8d867
+  return hwin || vwin || dwin
+end
+
+def horizontal_win(board, row)
+  return (board[row] == "X" && board[row+1] == "X" && board[row+2] == "X") || (board[row] == "O" && board[row+1] == "O" && board[row+2] == "O")
+end
+
+def verticle_win(board, row)
+  return (board[row] == "X" && board[row+3] == "X" && board[row+6] == "X") || (board[row] == "O" && board[row+3] == "O" && board[row+6] == "O")
+end
+
+def diagonal_winA(board, row)
+  return (board[row] == "X" && board[row+4] == "X" && board[row+8] == "X") || (board[row] == "O" && board[row+4] == "O" && board[row+8] == "O")
+end
+
+def diagonal_winB(board, row)
+  return (board[row] == "X" && board[row+2] == "X" && board[row+4] == "X") || (board[row] == "O" && board[row+2] == "O" && board[row+4] == "O")
+end
 # Define your play method below
