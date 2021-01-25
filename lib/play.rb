@@ -4,7 +4,7 @@ play(board)
 
  def play(board)
    counter = 0
-   while counter >= 9 && !win_state?(board)
+   while counter <= 9 && !win_state?(board)
      counter +=1
      turn(board)
    end
